@@ -42,3 +42,5 @@ Froide is supported by the [Open Knowledge Foundation Germany](http://www.okfn.d
 ## License
 
 Froide is licensed under the MIT License.
+
+## Update
