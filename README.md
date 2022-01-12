@@ -43,4 +43,6 @@ Froide is supported by the [Open Knowledge Foundation Germany](http://www.okfn.d
 
 Froide is licensed under the MIT License.
 
-## Update
+## CFH
+
+`docker-compose -f docker-compose.yml -f docker-compose.local.yml up --build`
