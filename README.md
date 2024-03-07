@@ -8,7 +8,8 @@
   <strong>A Freedom Of Information Portal for the State of Hawaii</strong>
 </div>
 
-> Note: This is a forked repo with a custom README. For the original document/repo, check out - https://github.com/okfde/froide
+
+> Note: This repository works in conjunction with the [CodeWithAloha/uipa](https://github.com/CodeWithAloha/uipa) repository. This repository is the "engine", while the froide repository is the "theme". It is _very_ likely that any work you do will not be in this repository, but in the theme/uipa repository.
 
 # Philosophy
 
