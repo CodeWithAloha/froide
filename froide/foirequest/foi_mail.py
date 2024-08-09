@@ -14,7 +14,7 @@ from froide.helper.email_utils import (EmailParser, get_unread_mails,
                                        make_address)
 from froide.helper.name_generator import get_name_from_number
 
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 
 import logging
 logger = logging.getLogger(__name__)
@@ -263,7 +263,7 @@ def package_foirequest(foirequest):
                 try:
                     zfile.write(attachment.file.path, arcname=filename)
                 except:
-                    url = urllib2.urlopen(attachment.file.url)
+                    url = urllib.request.urlopen(attachment.file.url)
                     zfile.writestr(filename, url.read())
         zfile.close()
     return zfile_obj.getvalue()
