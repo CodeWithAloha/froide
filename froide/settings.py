@@ -219,6 +219,7 @@ class Base(Configuration):
             "DIRS": [
                 PROJECT_ROOT / "templates",
             ],
+            "APP_DIRS": True,
             "OPTIONS": {
                 "debug": values.BooleanValue(DEBUG),
                 "loaders": [
