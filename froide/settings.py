@@ -463,7 +463,7 @@ class Base(Configuration):
     # ######## Search ###########
 
     ELASTICSEARCH_INDEX_PREFIX = "froide"
-    ELASTICSEARCH_HOST = values.Value("localhost")
+    ELASTICSEARCH_HOST = values.Value("localhost", environ=True, environ_name="ELASTICSEARCH_HOST")
     ELASTICSEARCH_DSL = {
         "default": {"hosts": "http://%s:9200" % ELASTICSEARCH_HOST},
     }
