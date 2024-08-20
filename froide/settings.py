@@ -464,8 +464,13 @@ class Base(Configuration):
 
     ELASTICSEARCH_INDEX_PREFIX = "froide"
     ELASTICSEARCH_HOST = values.Value("localhost", environ=True, environ_name="ELASTICSEARCH_HOST")
+    ELASTICSEARCH_USER = values.Value("elastic", environ=True, environ_name="ELASTICSEARCH_USER")
+    ELASTICSEARCH_PASSWORD = values.Value("****", environ=True, environ_name="ELASTICSEARCH_PASSWORD")
     ELASTICSEARCH_DSL = {
-        "default": {"hosts": "http://%s:9200" % ELASTICSEARCH_HOST},
+        "default": {
+            "hosts": "http://%s:9200" % ELASTICSEARCH_HOST,
+            'http_auth': (ELASTICSEARCH_USER, ELASTICSEARCH_PASSWORD)
+        },
     }
     ELASTICSEARCH_DSL_SIGNAL_PROCESSOR = (
         "django_elasticsearch_dsl.signals.RealTimeSignalProcessor"
